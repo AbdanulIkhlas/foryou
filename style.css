@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --body-color: #ffb3ff;
+    --container-color: #FF81FF;
+}
+
+body {
+    background-color: var(--body-color);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    font-family: 'Merriweather', serif;
+}
+
+.container {
+    margin-inline: auto;
+    width: 100%;
+    background-color: var(--container-color);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 90%;
+    transition: transform 0.5s ease-in-out;
+    padding: 50px;
+    padding-inline: 80px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.card {
+    width: 60vw;
+    /* Menggunakan min-width agar kartu tidak terpotong terlalu banyak */
+    margin: 0 10px;
+    /* Margin antar kartu */
+    flex: 0 0 auto;
+    /* Kartu memiliki lebar tetap agar tidak saling menimpa */
+    border: 1px solid #ddd;
+    /* Tambahkan garis tepi untuk efek menarik */
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 25px;
+}
+
+/* 
+.card:nth-child(1) {
+    margin-left: 30px;
+    margin-right: 40px;
+} */
+
+.card span {
+    padding-top: 20px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* Efek transisi box-shadow saat kartu dihover */
+.card:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tombol untuk menggeser ke kiri */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+    background-color: rgb(221, 221, 221);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .5px solid rgba(0, 0, 0, 0.293);
+}
+
+.prev-btn {
+    left: 5px;
+}
+
+.next-btn {
+    right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        /* background-color: var(--body-color);
+        box-sizing: border-box; */
+    }
+
+    .container {
+        /* margin-inline: auto;
+        width: 90%;
+        background-color: var(--container-color); */
+    }
+}

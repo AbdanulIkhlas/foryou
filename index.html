@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="card">
+                <p>
+                    Tau gak kode pertama yang <br>
+                    di buat programmer adalah <br>
+                    <span><strong>"Hello World"</strong></span>
+                </p>
+            </div>
+            <div class="card">
+                <p>
+                    Tapi kalau saya <br>
+                    <span><strong>"Hello You"</strong></span>
+                </p>
+            </div>
+            <div class="card">
+                <p>
+                    Itu karena <br>
+                    <span><strong>"You Are My World"</strong></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Tombol navigasi untuk menggeser slider -->
+    <span class="prev-btn" onclick="prevSlide()">&#10094;</span>
+    <span class="next-btn" onclick="nextSlide()">&#10095;</span>
+    <script>
+        const slider = document.querySelector(".slider");
+        const cards = document.querySelectorAll(".card");
+        let cardIndex = 0;
+
+        // Fungsi untuk menggeser slider ke kiri
+        function prevSlide() {
+            cardIndex = (cardIndex - 1 + cards.length) % cards.length;
+            slideCards();
+        }
+
+        // Fungsi untuk menggeser slider ke kanan
+        function nextSlide() {
+            cardIndex = (cardIndex + 1) % cards.length;
+            slideCards();
+        }
+
+        function slideCards() {
+            const offset = -cardIndex * cards[0].offsetWidth;
+            slider.style.transform = `translateX(${offset}px)`;
+        }
+
+        // Memastikan slider dimulai dari kartu pertama saat halaman dimuat
+        slideCards();
+
+        // Interval untuk menggeser otomatis slider setiap 3 detik
+        setInterval(nextSlide, 4000);
+    </script>
+</body>
+
+</html>
