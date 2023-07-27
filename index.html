@@ -45,9 +45,15 @@
             </div>
         </div>
     </div>
+
+    <audio autoplay loop>
+        <source src="backsound.mp3" type="audio/mpeg">
+    </audio>
+
     <!-- Tombol navigasi untuk menggeser slider -->
     <span class="prev-btn" onclick="prevSlide()">&#10094;</span>
     <span class="next-btn" onclick="nextSlide()">&#10095;</span>
+
     <script>
         const slider = document.querySelector(".slider");
         const cards = document.querySelectorAll(".card");
