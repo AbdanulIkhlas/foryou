@@ -45,8 +45,12 @@
             </div>
         </div>
     </div>
+    <!-- Tombol untuk memulai backsound -->
+    <button class="play-button" onclick="playBacksound()">&#9658;</button>
 
-    <audio autoplay loop>
+
+
+    <audio id="backsound" loop>
         <source src="backsound.mp3" type="audio/mpeg">
     </audio>
 
@@ -81,6 +85,16 @@
 
         // Interval untuk menggeser otomatis slider setiap 3 detik
         setInterval(nextSlide, 4000);
+
+        // Fungsi untuk memulai atau menghentikan backsound
+        function playBacksound() {
+            const backsound = document.getElementById('backsound');
+            if (backsound.paused) {
+                backsound.play();
+            } else {
+                backsound.pause();
+            }
+        }
     </script>
 </body>
 
