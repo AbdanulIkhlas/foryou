@@ -86,7 +86,7 @@ body {
 .next-btn {
     position: absolute;
     z-index: 99;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
     cursor: pointer;
@@ -144,7 +144,7 @@ body {
     color: #000;
     border-radius: 50%;
     border: none;
-    font-size: 29px;
+    font-size: 22px;
     cursor: pointer;
     margin-top: 400px;
     border: 1px solid black;
