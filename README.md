@@ -1,1 +1,1 @@
-### Gabut Gabut Berhadiah
+### Gabut Berhadiah
